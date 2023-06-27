@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         if(counter < 127)
             btnASL.text = counter.toString()
         else
-            txtASL.text = "Oops you need another type variable."
+            txtASL.text = "Oops you need another type variable..."
     }
 
 
