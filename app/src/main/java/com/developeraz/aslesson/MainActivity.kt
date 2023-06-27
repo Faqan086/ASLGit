@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    var counter = 0
+    private var counter:Byte = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,10 @@ class MainActivity : AppCompatActivity() {
         txtASL.textSize = 30F
         val btnASL = findViewById<Button>(R.id.button)
         counter++
-        btnASL.text = counter.toString()
+        if(counter < 127)
+            btnASL.text = counter.toString()
+        else
+            txtASL.text = "Oops you need another type variable."
     }
 
 
